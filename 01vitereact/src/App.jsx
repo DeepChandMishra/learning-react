@@ -1,32 +1,15 @@
 import { useState } from "react"
+import './index.css'
+import Card from "./components/Card"
 
 function App() {
-  let [counter, setcounter] = useState(15)
-
-
-  function addValue() {
-    setcounter((p) => {
-      if (p == 20) {
-        return (p = p)
-      }
-      else {
-        return (p = p + 1)
-      }
-    })
-  }
-
-  const removeValue = () => {
-    setcounter(counter - 1)
-  }
+  const [counter, setcounter] = useState(15)
 
   return (
     <>
-      <h1>chai aur react with vite</h1>
-      <h2> counter value:{counter}</h2>
-
-      <button onClick={addValue}>add value</button>
-      <br />
-      <button onClick={removeValue}>remove value</button>
+      <h1 className='bg-green-400 text-black p-4 rounded-xl mb-4'>tailwind test</h1>
+      <Card username="himani" btnText="click me" />
+      <Card username="munni" btnText="visit me" />
     </>
   )
 }
