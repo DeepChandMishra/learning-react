@@ -6,7 +6,7 @@ function App() {
   const [num,setNum]=useState(false)
   const [character,setCharacter] = useState(false)
   const [password,setPassword]=useState("")
-
+  const [color, setColor] = useState("blue");
   //useRef hook
 
   const passwordRef= useRef(null)
@@ -67,7 +67,7 @@ const passwordGenerator = useCallback(()=>{
           ref={passwordRef}
           />  
 
-          <button onClick={copyPassword} className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0">copy</button> 
+          <button onMouseEnter={()=>setColor("darkblue")} onMouseLeave={() => setColor("blue")} onClick={copyPassword} className="outline-none  text-white px-3 py-0.5 shrink-0" style={{backgroundColor:color}}>copy</button> 
 
       </div>
   
