@@ -1,3 +1,10 @@
+                                         //card app
+
+
+
+
+
+
 //import React from 'react'
 
 // function Card({username,btnText}) {
@@ -23,4 +30,4 @@
 //   )
 // }
 
-export default Card
+//export default Card
